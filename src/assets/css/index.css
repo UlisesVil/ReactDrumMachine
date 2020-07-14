@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+body {
+  font-family: Audiowide;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: url(../images/lines.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.inner-container {
+  position: relative;
+  width: 660px;
+  text-align: center;
+  background-image: url(../images/metal06.jpg);
+  border-radius: 10px;
+}
+
+.inner-container .pad-bank {
+  width: 332px;
+  height: 272px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.inner-container .pad-bank .drum-pad {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding-top: 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+.inner-container .controls-container {
+  width: 270px;
+  height: 152px;
+  display: inline-block;
+  margin: 0px 20px 0 10px;
+  vertical-align: top;
+}
+
+.inner-container .controls-container .control {
+  width: 100px;
+  margin: 15px auto;
+  display: inline-block;
+}
+
+.inner-container .controls-container .control p {
+  margin-bottom: 0;
+}
+
+.inner-container .controls-container .control .select {
+  margin: auto;
+}
+
+.inner-container .controls-container #display {
+  width: 150px;
+  background-color: rgba(141, 12, 216, 0.596);
+  margin: 15px auto 15px 10px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  color: white;
+  -webkit-box-shadow: 5px 5px 5px black;
+          box-shadow: 5px 5px 5px black;
+}
+
+.control {
+  width: 100px;
+  margin: 15px auto;
+  display: inline-block;
+  float: right;
+}
+
+.control p {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: white;
+  text-shadow: 7px 5px 3px #0c0e02;
+}
+
+.control .select {
+  margin: auto;
+}
+
+.outer-select, .inner-container .controls-container .control .select, .control .select {
+  width: 40px;
+  height: 20px;
+  background-color: rgba(88, 1, 99, 0.767);
+  background-position: center;
+  background-size: initial;
+  border: 1px solid #0a0202;
+  border-radius: 50px;
+  -webkit-box-shadow: 3px 3px 5px black;
+          box-shadow: 3px 3px 5px black;
+}
+
+.inner-select, .inner-container .controls-container .control .select .inner, .control .select .inner {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/metal05.jpg);
+  border-radius: 50px;
+}
+
+.volumetext {
+  margin-top: 0px;
+  color: white;
+}
+
+.volume-slider {
+  margin-bottom: 0px;
+  color: #070202;
+  margin-right: 100px;
+}
+
+::-webkit-slider-runnable-track {
+  height: 11px;
+  background-color: brown;
+}
+
+.logo {
+  height: 50px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.title {
+  color: white;
+  font-size: 25px;
+}
+/*# sourceMappingURL=index.css.map */

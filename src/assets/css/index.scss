@@ -1,0 +1,167 @@
+$padWidth: 100px;
+$padHeight: 80px;
+@import
+url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+body{
+    font-family: Audiowide;
+    user-select: none;
+    background-image: url(../images/lines.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#root{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.inner-container{
+    //outline: 5px solid black;
+    position: relative;
+    width: 660px;
+    text-align: center;
+    background-image: url(../images/metal06.jpg);
+    border-radius: 10px;
+    .pad-bank{
+        width: $padWidth*3+32;
+        height: $padHeight*3+32;
+        display: inline-block;
+        margin: 20px;
+        //border: 1px solid black;
+
+        .drum-pad{
+            position: relative;
+            float: left;
+            width: $padWidth;
+            height: $padHeight;
+            margin-right: 10px;
+            border-radius: 5px;
+            padding-top: 35px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+    }
+
+
+    .controls-container{
+        width: 270px;
+        height: $padHeight*1.5+32;
+        display: inline-block;
+        //border: 1px solid rgb(12, 14, 2);
+        margin: 0px 20px 0 10px;
+        vertical-align: top;
+        .control{
+            width: 100px;
+            margin: 15px auto;
+            //border: 1px solid green;
+            display: inline-block;
+            
+            p{
+                margin-bottom: 0;
+            }
+            .select {
+                margin:auto;
+                @extend .outer-select;
+                .inner {
+                    @extend .inner-select;
+                }
+            }
+        }
+
+
+        #display{
+            width: 150px;
+            background-color: rgba(141, 12, 216, 0.596);
+            margin: 15px auto 15px 10px;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 5px 5px 5px black;
+
+        }
+    }
+}
+
+
+.control{
+    width: 100px;
+    margin: 15px auto;
+    //border: 1px solid green;
+    display: inline-block;
+    float: right;
+    p{
+        margin-bottom: 0;
+        margin-top: 0;
+        color: white;
+        text-shadow:7px 5px 3px rgb(12, 14, 2);
+    }
+    .select {
+        margin:auto;
+        @extend .outer-select;
+        .inner {
+            @extend .inner-select;
+        }
+    }
+}
+
+.outer-select {
+    width: 40px;
+    height: 20px;
+    background-color: rgba(88, 1, 99, 0.767);
+    background-position: center;
+    background-size: initial;
+        border: 1px solid rgb(10, 2, 2);   
+    border-radius: 50px;
+    box-shadow: 3px 3px 5px black;
+}
+.inner-select {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/metal05.jpg); 
+    //border: 1px solid rgb(10, 2, 2);   
+    border-radius: 50px;
+}
+
+.volumetext{
+    margin-top: 0px;
+    //border: 1px solid black;
+    color: white;
+}
+.volume-slider{
+    margin-bottom: 0px;
+    //border: 1px solid black;
+color: rgb(7, 2, 2);
+margin-right: 100px;
+}
+
+::-webkit-slider-runnable-track{
+    //border-radius: 20px;
+    height: 11px;
+    background-color: brown;
+}
+
+input{
+    //background-color: white;
+}
+
+.logo{
+    //border: 1px solid red;
+    height: 50px;
+    padding: 0px;
+   // padding-bottom: 15px;
+    box-sizing: border-box;
+    display: inline-flex;
+   
+}
+
+
+.title{
+    color: white;
+    font-size: 25px;
+    
+}
