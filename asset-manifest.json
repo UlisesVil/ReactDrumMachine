@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/ReactDrumMachine/static/css/main.5f361e03.chunk.css",
-    "main.js": "/ReactDrumMachine/static/js/main.85e1a19e.chunk.js",
-    "main.js.map": "/ReactDrumMachine/static/js/main.85e1a19e.chunk.js.map",
+    "main.css": "/ReactDrumMachine/static/css/main.9d5de695.chunk.css",
+    "main.js": "/ReactDrumMachine/static/js/main.5da3deb9.chunk.js",
+    "main.js.map": "/ReactDrumMachine/static/js/main.5da3deb9.chunk.js.map",
     "runtime-main.js": "/ReactDrumMachine/static/js/runtime-main.da8baf7a.js",
     "runtime-main.js.map": "/ReactDrumMachine/static/js/runtime-main.da8baf7a.js.map",
-    "static/js/2.df731212.chunk.js": "/ReactDrumMachine/static/js/2.df731212.chunk.js",
-    "static/js/2.df731212.chunk.js.map": "/ReactDrumMachine/static/js/2.df731212.chunk.js.map",
+    "static/js/2.6b9bdc89.chunk.js": "/ReactDrumMachine/static/js/2.6b9bdc89.chunk.js",
+    "static/js/2.6b9bdc89.chunk.js.map": "/ReactDrumMachine/static/js/2.6b9bdc89.chunk.js.map",
     "index.html": "/ReactDrumMachine/index.html",
-    "precache-manifest.5ec840db393153a7dbce90e37d52caee.js": "/ReactDrumMachine/precache-manifest.5ec840db393153a7dbce90e37d52caee.js",
+    "precache-manifest.77a124d04be4bb5003b3b8b3c11cafc4.js": "/ReactDrumMachine/precache-manifest.77a124d04be4bb5003b3b8b3c11cafc4.js",
     "service-worker.js": "/ReactDrumMachine/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/ReactDrumMachine/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.df731212.chunk.js.LICENSE.txt": "/ReactDrumMachine/static/js/2.df731212.chunk.js.LICENSE.txt",
+    "static/css/main.9d5de695.chunk.css.map": "/ReactDrumMachine/static/css/main.9d5de695.chunk.css.map",
+    "static/js/2.6b9bdc89.chunk.js.LICENSE.txt": "/ReactDrumMachine/static/js/2.6b9bdc89.chunk.js.LICENSE.txt",
+    "static/media/button1.jpg": "/ReactDrumMachine/static/media/button1.8931edc5.jpg",
+    "static/media/button2.jpg": "/ReactDrumMachine/static/media/button2.0e1ebe01.jpg",
+    "static/media/index.css": "/ReactDrumMachine/static/media/metal06.b44b691f.jpg",
     "static/media/logo.svg": "/ReactDrumMachine/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.da8baf7a.js",
-    "static/js/2.df731212.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.85e1a19e.chunk.js"
+    "static/js/2.6b9bdc89.chunk.js",
+    "static/css/main.9d5de695.chunk.css",
+    "static/js/main.5da3deb9.chunk.js"
   ]
 }
