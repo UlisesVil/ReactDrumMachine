@@ -7,7 +7,7 @@ url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 body{
     font-family: Audiowide;
     user-select: none;
-    background-image: url(../images/lines.png);
+    background-image: url(../images/metal02.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -20,18 +20,17 @@ body{
 }
 
 .inner-container{
-    //outline: 5px solid black;
     position: relative;
     width: 660px;
     text-align: center;
     background-image: url(../images/metal06.jpg);
     border-radius: 10px;
+    
     .pad-bank{
         width: $padWidth*3+32;
         height: $padHeight*3+32;
         display: inline-block;
         margin: 20px;
-        //border: 1px solid black;
 
         .drum-pad{
             position: relative;
@@ -43,17 +42,18 @@ body{
             padding-top: 35px;
             box-sizing: border-box;
             cursor: pointer;
+            color: white;
+            text-shadow: 5px 5px 5px;
         }
     }
-
 
     .controls-container{
         width: 270px;
         height: $padHeight*1.5+32;
         display: inline-block;
-        //border: 1px solid rgb(12, 14, 2);
         margin: 0px 20px 0 10px;
         vertical-align: top;
+
         .control{
             width: 100px;
             margin: 15px auto;
@@ -63,6 +63,7 @@ body{
             p{
                 margin-bottom: 0;
             }
+
             .select {
                 margin:auto;
                 @extend .outer-select;
@@ -75,31 +76,31 @@ body{
 
         #display{
             width: 150px;
-            background-color: rgba(141, 12, 216, 0.596);
+            background:linear-gradient(90deg, rgba(73, 0, 95, 0.603) 0%, rgba(0,0,0,1) 100%);
             margin: 15px auto 15px 10px;
             padding: 15px;
             box-sizing: border-box;
             border-radius: 20px;
             color: white;
+            text-shadow: 5px 5px 10px white;
             box-shadow: 5px 5px 5px black;
-
         }
     }
 }
 
-
 .control{
     width: 100px;
     margin: 15px auto;
-    //border: 1px solid green;
     display: inline-block;
     float: right;
+
     p{
         margin-bottom: 0;
         margin-top: 0;
         color: white;
         text-shadow:7px 5px 3px rgb(12, 14, 2);
     }
+
     .select {
         margin:auto;
         @extend .outer-select;
@@ -112,56 +113,51 @@ body{
 .outer-select {
     width: 40px;
     height: 20px;
-    background-color: rgba(88, 1, 99, 0.767);
+    background:linear-gradient(90deg, rgba(73, 0, 95, 0.603) 0%, rgba(0,0,0,1) 100%);
     background-position: center;
     background-size: initial;
-        border: 1px solid rgb(10, 2, 2);   
+    border: 1px solid rgb(10, 2, 2);   
     border-radius: 50px;
     box-shadow: 3px 3px 5px black;
 }
+
 .inner-select {
     width: 20px;
     height: 20px;
-    background-image: url(../images/metal05.jpg); 
-    //border: 1px solid rgb(10, 2, 2);   
+    background-image: url(../images/metal05.jpg);
     border-radius: 50px;
+    border: 1px solid rgb(58, 57, 57);
 }
 
 .volumetext{
     margin-top: 0px;
-    //border: 1px solid black;
     color: white;
+    text-shadow: 5px 5px 10px white;
 }
+
 .volume-slider{
     margin-bottom: 0px;
-    //border: 1px solid black;
-color: rgb(7, 2, 2);
-margin-right: 100px;
+    margin-right: 100px;
 }
 
 ::-webkit-slider-runnable-track{
     //border-radius: 20px;
     height: 11px;
-    background-color: brown;
-}
-
-input{
-    //background-color: white;
+    background-color: rgb(82, 82, 82);
 }
 
 .logo{
-    //border: 1px solid red;
     height: 50px;
     padding: 0px;
-   // padding-bottom: 15px;
     box-sizing: border-box;
     display: inline-flex;
-   
 }
-
 
 .title{
     color: white;
     font-size: 25px;
+    text-shadow: 5px 5px 10px white;
     
 }
+
+

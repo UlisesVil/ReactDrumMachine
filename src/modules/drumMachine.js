@@ -1,6 +1,4 @@
 import React from 'react';
-import Background1 from '../assets/images/button1.jpg';
-import Background2 from '../assets/images/button2.jpg';
 
 const bankOne = [{
         keyCode:81,
@@ -50,7 +48,6 @@ const bankOne = [{
     }
 ];
 
-
 const bankTwo = [{
         keyCode:81,
         keyTrigger:'Q',
@@ -99,20 +96,17 @@ const bankTwo = [{
     }
 ];
 
-
 const activeStyle = {
-    //backgroundImage: "url("+{Background2}+")",
     backgroundColor: "rgba(0, 0, 0, 0.521)",
     boxShadow: "0 3px red",
     height: 77,
     marginTop: 13,
-    color: "white",
+    color: "red",
     boxShadow: "0 0 30px rgba(194, 2, 2, 0.89)"
 }
 
 const inactiveStyle = {
-    //backgroundImage: "url("+{Background1}+")",
-    background: "linear-gradient(90deg, rgba(129,1,167,1) 0%, rgba(0,0,0,1) 100%)",
+    background: "linear-gradient(90deg, rgba(128, 1, 167, 0.400) 0%, rgba(0,0,0,1) 100%)",
     marginTop: 10,
     boxShadow: "3px 3px 5px black"
 }
@@ -146,9 +140,7 @@ class DrumPad extends React.Component {
     activatePad(){
 
         if(this.props.power){
-            //this.state.padStyle.backgroundImage ===  "url("+{Background2}+")" ?
             this.state.padStyle.backgroundColor ===  "rgba(0, 0, 0, 0.521)" ?
-
             this.setState({
                 padStyle: inactiveStyle
             }) :
@@ -164,7 +156,6 @@ class DrumPad extends React.Component {
                 padStyle: {
                     height: 77,
                     marginTop: 13,
-                    //backgroundImage: "url("+{Background1}+")",
                     background: "linear-gradient(90deg, rgba(129,1,167,1) 0%, rgba(0,0,0,1) 100%)",
                     boxShadow: "0 3px grey"
                 }
@@ -175,21 +166,20 @@ class DrumPad extends React.Component {
 
     playSound(e) {
         const sound = 
-                document.getElementById(this.props.keyTrigger);
-                sound.currentTime = 0;
-                sound.play();
-                this.activatePad();
-                setTimeout(() => this.activatePad(),100);
-                this.props.updateDisplay(this.props.clipId.replace(/-/g,' '));
+            document.getElementById(this.props.keyTrigger);
+            sound.currentTime = 0;
+            sound.play();
+            this.activatePad();
+            setTimeout(() => this.activatePad(),100);
+            this.props.updateDisplay(this.props.clipId.replace(/-/g,' '));
     }
-
 
     render() {
         return (
             <div id={this.props.clipId}
-                 onClick={this.playSound}
-                 className="drum-pad"
-                 style={this.state.padStyle}>
+                onClick={this.playSound}
+                className="drum-pad"
+                style={this.state.padStyle}>
 
                 <audio className='clip' 
                     id={this.props.keyTrigger}
@@ -276,16 +266,16 @@ class DrumMachine extends React.Component {
     selectBank() {
         if (this.state.power) {
             this.state.currentPadBankId === 'Heater Kit' ?
-                this.setState({
-                    currentPadBank: bankTwo,
-                    display: 'Smooth Piano Kit',
-                    currentPadBankId: 'Smooth Piano Kit',
-                }) :
-                this.setState({
-                    currentPadBank: bankOne,
-                    display: 'Heater Kit',
-                    currentPadBankId: 'Heater Kit',
-                });
+            this.setState({
+                currentPadBank: bankTwo,
+                display: 'Smooth Piano Kit',
+                currentPadBankId: 'Smooth Piano Kit',
+            }) :
+            this.setState({
+                currentPadBank: bankOne,
+                display: 'Heater Kit',
+                currentPadBankId: 'Heater Kit',
+            });
         }
     }
 
@@ -315,24 +305,17 @@ class DrumMachine extends React.Component {
 
     render() {
         const powerSlider = this.state.power ? 
-        {
-            float: 'right'
-        } : {
-            float: 'left'
-        };
+        {float: 'right'} : {float: 'left'};
 
         const bankSlider = this.state.currentPadBank === bankOne ?
-        {
-            float: 'left'
-        } : {
-            float: 'right'
-        }; 
+        {float: 'left'} : {float: 'right'}; 
+
         {
             const clips = 
                 [].slice.call(document.getElementsByClassName('clip'));
-                 clips.forEach(sound => {
-                     sound.volume = this.state.sliderVal
-                 });   
+                clips.forEach(sound => {
+                    sound.volume = this.state.sliderVal
+                });   
         }
 
         return (
@@ -342,24 +325,23 @@ class DrumMachine extends React.Component {
                     <p className="title">Drum Machine</p>
                 </div>
                 <div className="control">
-                        <p>Power</p>
-                        <div onClick={this.powerControl}
-                              className="select">
-                            <div style={powerSlider} 
-                                 className="inner">
-                            </div>         
-                        </div>
+                    <p>Power</p>
+                    <div onClick={this.powerControl}
+                         className="select">
+                        <div style={powerSlider} 
+                             className="inner">
+                        </div>         
                     </div>
+                </div>
 
                 <div className="controls-container">
-                   
                     <div className="control">
                         <p>Bank</p>
                         <div onClick={this.selectBank}
-                                className="select">
-                                <div style={bankSlider}
+                             className="select">
+                            <div style={bankSlider}
                                     className="inner">
-                                </div>    
+                            </div>    
                         </div>    
                     </div>
 
@@ -368,14 +350,11 @@ class DrumMachine extends React.Component {
                     </p>
                     <div className="volume-slider">
                         <input className="vslider" type="range" min="0" max="1" step="0.01"
-                                value={this.state.sliderVal}
-                                onChange={this.adjustVolume}
+                            value={this.state.sliderVal}
+                            onChange={this.adjustVolume}
                         />
                         <p className="volumetext">- Volume +</p>
                     </div>
-                                      
-                    
-                    
                 </div>
 
                 <PadBank 
@@ -384,16 +363,9 @@ class DrumMachine extends React.Component {
                     clipVolume={this.state.sliderVal}
                     currentPadBank={this.state.currentPadBank}
                 />
-
            </div>
         )
     }
 }
-
-
-
-
-
-
 
 export default DrumMachine;

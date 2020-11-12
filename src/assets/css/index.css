@@ -5,7 +5,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-image: url(../images/lines.png);
+  background-image: url(../images/metal02.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -49,6 +49,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
+  color: white;
+  text-shadow: 5px 5px 5px;
 }
 
 .inner-container .controls-container {
@@ -75,13 +77,15 @@ body {
 
 .inner-container .controls-container #display {
   width: 150px;
-  background-color: rgba(141, 12, 216, 0.596);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(73, 0, 95, 0.603)), to(black));
+  background: linear-gradient(90deg, rgba(73, 0, 95, 0.603) 0%, black 100%);
   margin: 15px auto 15px 10px;
   padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 20px;
   color: white;
+  text-shadow: 5px 5px 10px white;
   -webkit-box-shadow: 5px 5px 5px black;
           box-shadow: 5px 5px 5px black;
 }
@@ -107,7 +111,8 @@ body {
 .outer-select, .inner-container .controls-container .control .select, .control .select {
   width: 40px;
   height: 20px;
-  background-color: rgba(88, 1, 99, 0.767);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(73, 0, 95, 0.603)), to(black));
+  background: linear-gradient(90deg, rgba(73, 0, 95, 0.603) 0%, black 100%);
   background-position: center;
   background-size: initial;
   border: 1px solid #0a0202;
@@ -121,22 +126,23 @@ body {
   height: 20px;
   background-image: url(../images/metal05.jpg);
   border-radius: 50px;
+  border: 1px solid #3a3939;
 }
 
 .volumetext {
   margin-top: 0px;
   color: white;
+  text-shadow: 5px 5px 10px white;
 }
 
 .volume-slider {
   margin-bottom: 0px;
-  color: #070202;
   margin-right: 100px;
 }
 
 ::-webkit-slider-runnable-track {
   height: 11px;
-  background-color: brown;
+  background-color: #525252;
 }
 
 .logo {
@@ -152,5 +158,6 @@ body {
 .title {
   color: white;
   font-size: 25px;
+  text-shadow: 5px 5px 10px white;
 }
 /*# sourceMappingURL=index.css.map */
