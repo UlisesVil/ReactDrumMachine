@@ -5,9 +5,10 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-image: url(../images/metal02.jpg);
+  background-image: url(../images/back1.jpg);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #root {
@@ -24,11 +25,15 @@ body {
 }
 
 .inner-container {
-  position: relative;
   width: 660px;
   text-align: center;
-  background-image: url(../images/metal06.jpg);
+  background-image: url(../images/back4.jpg);
   border-radius: 10px;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position-y: 65px;
+  margin: 0px auto;
 }
 
 .inner-container .pad-bank {
@@ -44,8 +49,8 @@ body {
   width: 100px;
   height: 80px;
   margin-right: 10px;
-  border-radius: 5px;
   padding-top: 35px;
+  border-radius: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
@@ -77,8 +82,8 @@ body {
 
 .inner-container .controls-container #display {
   width: 150px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(73, 0, 95, 0.603)), to(black));
-  background: linear-gradient(90deg, rgba(73, 0, 95, 0.603) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(95, 0, 0, 0.603)), to(black));
+  background: linear-gradient(90deg, rgba(95, 0, 0, 0.603) 0%, black 100%);
   margin: 15px auto 15px 10px;
   padding: 15px;
   -webkit-box-sizing: border-box;
@@ -93,7 +98,6 @@ body {
 .control {
   width: 100px;
   margin: 15px auto;
-  display: inline-block;
   float: right;
 }
 
@@ -111,8 +115,8 @@ body {
 .outer-select, .inner-container .controls-container .control .select, .control .select {
   width: 40px;
   height: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(73, 0, 95, 0.603)), to(black));
-  background: linear-gradient(90deg, rgba(73, 0, 95, 0.603) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(95, 0, 0, 0.603)), to(black));
+  background: linear-gradient(90deg, rgba(95, 0, 0, 0.603) 0%, black 100%);
   background-position: center;
   background-size: initial;
   border: 1px solid #0a0202;
@@ -159,5 +163,111 @@ body {
   color: white;
   font-size: 25px;
   text-shadow: 5px 5px 10px white;
+}
+
+/*ScrollBar*/
+::-webkit-scrollbar-corner {
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background: #2c2b2b;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: #990202;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 10px;
+  background: red;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 625px) {
+  .inner-container {
+    background-position-y: 118px;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pad-bank {
+    width: 95% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto !important;
+  }
+  .pad-bank .drum-pad {
+    width: 30% !important;
+    height: 30%;
+    margin-right: 5px !important;
+    margin-left: 5px !important;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .inner-container {
+    width: 100%;
+    margin-left: 0px !important;
+  }
+  .pad-bank {
+    width: 95% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto !important;
+  }
+  .pad-bank .drum-pad {
+    width: 31% !important;
+    height: 30%;
+    margin-right: 3px !important;
+    margin-left: 2px !important;
+  }
+  .controls-container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .control {
+    float: left;
+  }
+  .bank {
+    position: relative;
+    top: -43px !important;
+    right: -55px !important;
+  }
+  #display {
+    position: relative;
+    width: 80% !important;
+    left: -5px !important;
+    top: -40px !important;
+  }
+  .volume-slider {
+    position: relative;
+    width: 80% !important;
+    left: 35px !important;
+    top: -40px !important;
+  }
 }
 /*# sourceMappingURL=index.css.map */

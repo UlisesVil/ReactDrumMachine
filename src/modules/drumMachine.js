@@ -106,11 +106,10 @@ const activeStyle = {
 }
 
 const inactiveStyle = {
-    background: "linear-gradient(90deg, rgba(128, 1, 167, 0.400) 0%, rgba(0,0,0,1) 100%)",
+    background: "linear-gradient(90deg, rgba(95, 0, 0, 0.603) 0%, rgba(0,0,0,1) 100%)",
     marginTop: 10,
     boxShadow: "3px 3px 5px black"
 }
-
 
 class DrumPad extends React.Component {
     constructor(props){
@@ -138,7 +137,6 @@ class DrumPad extends React.Component {
     } 
 
     activatePad(){
-
         if(this.props.power){
             this.state.padStyle.backgroundColor ===  "rgba(0, 0, 0, 0.521)" ?
             this.setState({
@@ -156,13 +154,12 @@ class DrumPad extends React.Component {
                 padStyle: {
                     height: 77,
                     marginTop: 13,
-                    background: "linear-gradient(90deg, rgba(129,1,167,1) 0%, rgba(0,0,0,1) 100%)",
+                    background: "grey",
                     boxShadow: "0 3px grey"
                 }
             });
         }
     }
-
 
     playSound(e) {
         const sound = 
@@ -185,14 +182,11 @@ class DrumPad extends React.Component {
                     id={this.props.keyTrigger}
                     src={this.props.clip}>
                 </audio>
-                
                 {this.props.keyTrigger}
-            
             </div>
         )
     }
 }
-
 
 class PadBank extends React.Component {
     constructor(props){
@@ -236,8 +230,6 @@ class PadBank extends React.Component {
     }
 }
 
-
-
 class DrumMachine extends React.Component {
     constructor(props){
         super(props);
@@ -248,7 +240,6 @@ class DrumMachine extends React.Component {
             currentPadBankId: 'Heater Kit',
             sliderVal: 0.3
         }
-
         this.displayClipName = this.displayClipName.bind(this);
         this.selectBank = this.selectBank.bind(this);
         this.adjustVolume = this.adjustVolume.bind(this);
@@ -320,7 +311,6 @@ class DrumMachine extends React.Component {
 
         return (
             <div id="drum-machine" className="inner-container">
-                
                 <div className="logo">
                     <p className="title">Drum Machine</p>
                 </div>
@@ -335,7 +325,7 @@ class DrumMachine extends React.Component {
                 </div>
 
                 <div className="controls-container">
-                    <div className="control">
+                    <div className="control bank">
                         <p>Bank</p>
                         <div onClick={this.selectBank}
                              className="select">

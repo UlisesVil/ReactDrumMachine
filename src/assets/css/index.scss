@@ -3,13 +3,13 @@ $padHeight: 80px;
 @import
 url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-
 body{
     font-family: Audiowide;
     user-select: none;
-    background-image: url(../images/metal02.jpg);
+    background-image: url(../images/back1.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #root{
@@ -20,11 +20,15 @@ body{
 }
 
 .inner-container{
-    position: relative;
     width: 660px;
     text-align: center;
-    background-image: url(../images/metal06.jpg);
+    background-image: url(../images/back4.jpg);
     border-radius: 10px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position-y: 65px;
+    margin: 0px auto;
     
     .pad-bank{
         width: $padWidth*3+32;
@@ -38,8 +42,8 @@ body{
             width: $padWidth;
             height: $padHeight;
             margin-right: 10px;
-            border-radius: 5px;
             padding-top: 35px;
+            border-radius: 5px;
             box-sizing: border-box;
             cursor: pointer;
             color: white;
@@ -57,7 +61,6 @@ body{
         .control{
             width: 100px;
             margin: 15px auto;
-            //border: 1px solid green;
             display: inline-block;
             
             p{
@@ -76,7 +79,7 @@ body{
 
         #display{
             width: 150px;
-            background:linear-gradient(90deg, rgba(73, 0, 95, 0.603) 0%, rgba(0,0,0,1) 100%);
+            background:linear-gradient(90deg, rgba(95, 0, 0, 0.603) 0%, rgba(0,0,0,1) 100%);
             margin: 15px auto 15px 10px;
             padding: 15px;
             box-sizing: border-box;
@@ -91,7 +94,6 @@ body{
 .control{
     width: 100px;
     margin: 15px auto;
-    display: inline-block;
     float: right;
 
     p{
@@ -113,7 +115,7 @@ body{
 .outer-select {
     width: 40px;
     height: 20px;
-    background:linear-gradient(90deg, rgba(73, 0, 95, 0.603) 0%, rgba(0,0,0,1) 100%);
+    background:linear-gradient(90deg, rgba(95, 0, 0, 0.603) 0%, rgba(0,0,0,1) 100%);
     background-position: center;
     background-size: initial;
     border: 1px solid rgb(10, 2, 2);   
@@ -141,7 +143,6 @@ body{
 }
 
 ::-webkit-slider-runnable-track{
-    //border-radius: 20px;
     height: 11px;
     background-color: rgb(82, 82, 82);
 }
@@ -160,4 +161,110 @@ body{
     
 }
 
+/*ScrollBar*/
+::-webkit-scrollbar-corner {
+    border-radius: 2px;
+    cursor: pointer;
+}
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background: #2c2b2b;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: #990202;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 10px;
+    background: red;
+    border-radius: 20px;
+}
+
+
+
+@media screen and(max-width: 625px){
+    .inner-container{
+        background-position-y: 118px;
+        width: 95%;
+    }
+
+}
+
+@media screen and(max-width: 400px){
+   
+
+    .pad-bank{
+        width: 95% !important;
+        height: fit-content;
+        margin: 0 auto !important;
+
+        .drum-pad{
+            width: 30% !important;
+            height: 30%;
+            margin-right: 5px!important;
+            margin-left: 5px!important;
+        }
+    }
+
+}
+
+@media screen and(max-width: 325px){
+   
+    .inner-container{
+        width: 100%;
+        margin-left: 0px !important;
+    }
+
+    .pad-bank{
+        width: 95% !important;
+        height: fit-content;
+        margin: 0 auto !important;
+
+        .drum-pad{
+            width: 31% !important;
+            height: 30%;
+            margin-right: 3px!important;
+            margin-left: 2px!important;
+        }
+    }
+
+    .controls-container{
+        display: flex !important;
+        flex-direction: column!important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .control{
+        float: left;
+    }
+
+    .bank{
+        position: relative;
+        top: -43px !important;
+        right: -55px !important;
+    }
+
+    #display{
+        position: relative;
+        width: 80% !important;
+        left: -5px !important;
+        top: -40px !important;
+    }
+    .volume-slider{
+        position: relative;
+        width: 80% !important;
+        left: 35px !important;
+        top: -40px !important;
+    }
+
+}
